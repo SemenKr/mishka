@@ -13,4 +13,8 @@
 
 .type-form__item:not(:last-child) {
   margin-bottom: 24px;
+
+  @media (--not-mobile) {
+    margin-bottom: 58px;
+  }
 }

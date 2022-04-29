@@ -28,15 +28,28 @@
   color: #000000;
   text-decoration: none;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (--not-mobile) {
+    padding-top: 32.5px;
+    padding-bottom: 31.5px;
+  }
 
 
   &--icon_search {
     --icon: url("../../img/search.svg");
     background-repeat: no-repeat;
     background-position: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
 
     @media (--tablet) {
-      display: none;
+      min-width: 82px;
+
+      span {
+        display: none;
+      }
     }
 
     &::before {
@@ -47,9 +60,6 @@
       background: #000000;
       mask: var(--icon);
       box-sizing: border-box;
-      position: absolute;
-      top: 32px;
-      left: 32px;
     }
 
     &:hover::before {
@@ -67,6 +77,7 @@
     --icon: url("../../img/basket.svg");
     background-repeat: no-repeat;
     background-position: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
 
     &::before {
       content: "";

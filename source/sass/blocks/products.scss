@@ -1,4 +1,5 @@
 .products {
+  position: relative;
   background-image: url("../../img/background-featured-mobile.jpg");
   background-color: var(--main-color, #ffffff);
   background-repeat: no-repeat;
@@ -7,10 +8,38 @@
   padding-top: 73px;
   box-sizing: border-box;
   min-width: 320px;
+
+  @media (--not-mobile) {
+    &::after {
+      content: "";
+      display: block;
+      background: url("../../img/wave-decore.svg");
+      background-repeat: repeat-x;
+      background-size: 35px;
+      height: 24px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+    }
+  }
+
+  @media (--desktop) {
+    &::after {
+      content: "";
+      display: block;
+      background: url("../../img/wave-decore.svg");
+      background-repeat: repeat-x;
+      background-size: 50px;
+      height: 34px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+    }
+  }
 }
 
 .products__title {
-  margin-bottom: 120px;
+  margin-bottom: 0;
   margin-top: 0;
 }
 

@@ -4,18 +4,19 @@
   font-weight: 700;
   text-transform: uppercase;
   color: var(--accent-color);
+  word-wrap: normal;
 
   @media (--mobile) {
+    position: relative;
     display: flex;
     align-items: center;
 
     &::after {
       content: "";
-      background: url("../../img/layer-form-titles.svg");
-      background-position: right;
-      background-repeat: repeat-x;
-      min-width: 200px;
+      position: relative;
+      background: #62d1ba;
       height: 1px;
+      width: 100%;
       display: block;
       margin-left: 15px;
     }

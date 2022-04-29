@@ -8,7 +8,7 @@
 
   @media (--desktop) {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -41,6 +41,12 @@
     grid-column: 2 / -1;
     grid-row: 1 /2;
   }
+
+  &--short {
+    @media (--desktop) {
+      grid-column: 2 / 6;
+    }
+  }
 }
 
 .fieldset-grid__button {
@@ -50,7 +56,7 @@
   }
 
   @media (--desktop) {
-    grid-column: 2 / -1;
+    grid-column: 2 / 6;
     grid-row: 2 / 3;
   }
 }

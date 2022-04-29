@@ -1,6 +1,17 @@
 .description-list {
   list-style-type: none;
   font-size: 13px;
-  line-height: 30px;
+  line-height: 2.31;
   font-weight: 400;
+  color: #444444;
+  display: flex;
+}
+
+.description-list__name {
+  margin-right: 4px;
+}
+
+.description-list__value {
+  margin: 0;
+  margin-right: 4px;
 }

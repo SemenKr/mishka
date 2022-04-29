@@ -1,3 +1,19 @@
 .featured {
   padding: 0;
+  position: relative;
+}
+
+.featured__container {
+  padding-top: 31px;
+  padding-bottom: 36px;
+
+  @media (--not-mobile) {
+    padding-top: 39.5px;
+    padding-bottom: 52px;
+  }
+
+  @media (--desktop) {
+    padding-top: 54px;
+    padding-bottom: 73px;
+  }
 }

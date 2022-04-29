@@ -1,3 +1,13 @@
 .catalog-page {
   background: var(--main-color);
 }
+
+.catalog-page__title {
+  margin: 0;
+}
+
+.catalog-page__products {
+  @media (--not-mobile) {
+    margin-bottom: 53px;
+  }
+}

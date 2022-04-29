@@ -1,8 +1,13 @@
 .video-description {
   font-size: 13px;
-  line-height: 24px;
+  line-height: 1.85;
   font-weight: 400;
   color: #444444;
   display: flex;
   flex-direction: column;
+
+  @media (--not-mobile) {
+    font-size: 15px;
+    line-height: 2;
+  }
 }

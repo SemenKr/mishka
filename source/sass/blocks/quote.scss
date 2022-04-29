@@ -7,4 +7,8 @@
 .quote__text {
   margin: 0;
   margin-bottom: 33px;
+
+  @media (--not-mobile) {
+    margin-bottom: 61px;
+  }
 }

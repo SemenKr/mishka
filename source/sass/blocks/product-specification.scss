@@ -3,4 +3,26 @@
   line-height: 20px;
   font-weight: 400;
   color: #444444;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-collapse: collapse;
+}
+
+.product-specification__item {
+  grid-column: 1/2;
+  border-bottom: 1px solid #ececec;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.product-specification__specification {
+  grid-column: 2/3;
+  border-bottom: 1px solid #ececec;
+  margin: 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 30px;
+  position: relative;
 }

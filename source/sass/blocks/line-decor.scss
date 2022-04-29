@@ -1,6 +1,23 @@
-.line-decor--bottom {
+.line-decor--bottom::after {
+  content: "";
   background-image: url("../../img/zigzag-line.svg");
   background-position: bottom;
   background-repeat: repeat-x;
+  background-size: auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   z-index: 2;
+  height: 6px;
+  width: 100%;
+
+  @media (--not-mobile) {
+    height: 17px;
+    width: 100%;
+  }
+
+  @media (--desktop) {
+    height: 23px;
+    width: 100%;
+  }
 }

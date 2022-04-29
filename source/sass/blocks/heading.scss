@@ -16,11 +16,20 @@
 
   &--level_2 {
     font-size: 25px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   &--level_3 {
     font-size: 17px;
-    line-height: 24px;
+    line-height: 1.41;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: start;
+
+    @media (--not-mobile) {
+      font-size: 20px;
+      line-height: 1.2;
+    }
   }
 }

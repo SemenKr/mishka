@@ -1,10 +1,28 @@
 .catalog-products {
   min-width: 260px;
   max-width: 1050px;
+
+  @media (--mobile) {
+    padding-top: 30px;
+  }
+
+  @media (--not-mobile) {
+    padding-top: 67px;
+  }
+
+  @media (--desktop) {
+    padding-top: 111px;
+  }
 }
 
 .catalog-products__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.catalog-products__item {
+  @media (--mobile) {
+    margin-bottom: 30px;
+  }
 }

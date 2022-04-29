@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
 
+  @media (--not-mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 54px;
+  }
+
   @media (--desktop) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1051px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 51px;
+    max-width: 1051px;
   }
 }

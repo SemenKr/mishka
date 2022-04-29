@@ -1,5 +1,10 @@
 .about__title {
   text-align: start;
+  margin: 0;
+
+  @media (--mobile) {
+    margin-bottom: 28px;
+  }
 
   @media (--desktop) {
     padding-left: 175px;
@@ -7,9 +12,27 @@
 }
 
 .about__container {
+  @media (--mobile) {
+    padding-top: 31px;
+    padding-bottom: 58px;
+  }
+
+  @media (--not-mobile) {
+    padding-top: 55.5px;
+    padding-bottom: 83px;
+  }
+
   @media (--desktop) {
-    padding-left: 175px;
+    padding-top: 68px;
     padding-right: 175px;
+    padding-bottom: 90px;
+    padding-left: 175px;
+
     max-width: 1050px;
   }
+}
+
+
+.about__list {
+  margin: 0;
 }

@@ -8,4 +8,8 @@
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+
+  @media (--not-mobile) {
+    padding: 21.5px 0;
+  }
 }

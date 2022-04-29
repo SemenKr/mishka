@@ -1,4 +1,30 @@
+.contact-details__container {
+  padding: 50px 0;
+}
+
 .contact-details__list {
   list-style-type: none;
   padding: 0;
+}
+
+.contact-details__item {
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 34.5px;
+
+    @media (--not-mobile) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.contact-details__value {
+  border: none;
+  box-shadow: inset 0 -2px 0 #000000;
+  padding: 14px 10px 20px 0;
+  background-color: inherit;
 }

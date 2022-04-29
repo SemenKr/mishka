@@ -1,4 +1,40 @@
 .catalog-title {
-  padding: 73.5px 42px;
   background: var(--second-color);
+  padding: 73.5px 22px;
+  position: relative;
+
+  @media (--not-mobile) {
+    padding-top: 101px;
+    padding-bottom: 75px;
+
+    &::after {
+      content: "";
+      display: block;
+      background: url("../../img/wave-decore.svg");
+      background-repeat: repeat-x;
+      background-size: 35px;
+      height: 24px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      left: -2px;
+    }
+  }
+
+  @media (--desktop) {
+    padding-top: 102.5px;
+    padding-bottom: 96px;
+
+    &::after {
+      content: "";
+      display: block;
+      background: url("../../img/wave-decore.svg");
+      background-repeat: repeat-x;
+      background-size: 50px;
+      height: 34px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+    }
+  }
 }

@@ -7,14 +7,14 @@
 <main class="main-container">
   <h1 class="visually-hidden">Магазин милых штук ручной работы для дома "Mishka"</h1>
   <section class="products">
-    <h2 class="products__title heading page__centerer">Милые штуки ручной работы для дома</h2>
+    <h2 class="products__title heading page__centerer">Милые штуки ручной <br> работы для дома</h2>
     <div class="page__centerer page__centerer--desktop_on">
       <ul class="products__list products-list ">
         <li class="products-list__item">
-          <a class="products-list__link products-list__link--icon_interior" href="#">Предметы<br> интерьера</a>
+          <a class="products-list__link products-list__link--icon_interior" href="#">Предметы <br> интерьера</a>
         </li>
         <li class="products-list__item">
-          <a class="products-list__link products-list__link--icon_toy" href="#">Детские<br> игрушки</a>
+          <a class="products-list__link products-list__link--icon_toy" href="#">Детские <br> игрушки</a>
         </li>
       </ul>
     </div>
@@ -23,19 +23,19 @@
     <div class="featured__container ">
       <h2 class="visually-hidden">Описание</h2>
       <div class="featured__product product">
-        <h3 class="product__title heading heading--level_2">Вязаные корзинки</h3>
+        <h3 class="product__title heading">Вязаные корзинки</h3>
         <span class="product__label card-label">Товар недели</span>
         <div class="product__description-container">
           <p class="product__description">
             Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.
           </p>
           <dl class="product__list product-specification">
-            <dt class="product__item">Цвет:</dt>
-            <dd class="product__specification">иффани/серый</dd>
-            <dt class="product__item">Диаметр:</dt>
-            <dd class="product__specification">25 см</dd>
-            <dt class="product__item">Высота:</dt>
-            <dd class="product__specification">15 см</dd>
+            <dt class="product-specification__item">Цвет:</dt>
+            <dd class="product-specification__specification">иффани/серый</dd>
+            <dt class="product-specification__item">Диаметр:</dt>
+            <dd class="product-specification__specification">25 см</dd>
+            <dt class="product-specification__item">Высота:</dt>
+            <dd class="product-specification__specification">15 см</dd>
           </dl>
         </div>
         <img class="product__image" src="img/basket-mobile.jpg" width="260" height="315"
@@ -45,14 +45,14 @@
             <dt class="product-price__description">Цена:</dt>
             <dd class="product-price__number">990 руб.</dd>
           </dl>
-          <a class="product__button button" href="form.html">Заказать</a>
+          <a class="product__button button button--size_wide" href="form.html">Заказать</a>
         </div>
       </div>
     </div>
   </section>
   <section class="about">
     <div class="about__container page__centerer">
-      <h2 class="about__title heading heading--level_2">Коротко о нас:</h2>
+      <h2 class="about__title heading heading">Коротко о нас:</h2>
       <ul class="about__list advantage">
         <li class="advantage__item">
           <span class="advantage__text advantage__text--icon_flower">Экологически чистые материалы</span>
@@ -77,7 +77,7 @@
   </section>
   <section class="reviews line-decor line-decor--bottom">
     <div class="reviews__container page__centerer">
-      <h2 class="reviews__title heading heading--level_2">Отзывы</h2>
+      <h2 class="reviews__title heading heading">Отзывы</h2>
       <figure class="reviews__quote quote">
         <blockquote class="quote__text">
           Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
@@ -87,27 +87,25 @@
         <figcaption class="quote__author author">Анастасия Красильникова <span
             class="author__id author-id">@misssssiskras</span></figcaption>
       </figure>
-      <p class="reviews__buttons button-reviews">
       <div class="reviews__slider slider-reviews">
-        <button class=" reviews__previous button" type="button">
+        <button class=" slider-reviews__previous" type="button">
           <span class="visually-hidden">Предыдущий отзыв</span>
         </button>
-        <button class="reviews__next button" type="button">
+        <button class="slider-reviews__next" type="button">
           <span class="visually-hidden">Следующий отзыв</span>
         </button>
       </div>
-      <a class="reviews__write button" href="#">Написать</a>
-      </p>
+      <a class="reviews__write button button--size_wide" href="#">Написать</a>
     </div>
   </section>
   <article class="contacts">
-    <h2 class="contacts__title contacts__container page__centerer">Контакты</h2>
+    <h2 class="contacts__title heading contacts__container page__centerer">Контакты</h2>
     <address class="contacts__address address contacts__container page__centerer">
-      <dl class="contacts__list">
+      <dl class="address__list">
         <dt class="address__email">e-mail:</dt>
-        <dd><a class="address__link link-address" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+        <dd class="address__content address__content--email"><a class="address__link link-address" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
         <dt class="address__title">адрес:</dt>
-        <dd class="address__content">г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</dd>
+        <dd class="address__content address__content--address">г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</dd>
       </dl>
     </address>
     <div class="contacts__map">

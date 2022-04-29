@@ -4,4 +4,8 @@
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (--not-mobile) {
+    line-height: 1;
+  }
 }

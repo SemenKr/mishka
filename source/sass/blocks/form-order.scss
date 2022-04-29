@@ -1,10 +1,23 @@
 .form-order {
-
+  padding-top: 17px;
   background: var(--main-color);
+
+  @media (--not-mobile) {
+    padding-top: 54px;
+  }
+
+  @media (--desktop) {
+    padding-top: 98.5px;
+  }
 }
 
 .form-order__text {
   margin-bottom: 29px;
+  margin-top: 0;
+
+  @media (--not-mobile) {
+    margin-bottom: 63px;
+  }
 }
 
 .form-order__field-type {
@@ -13,7 +26,11 @@
 
 .form-order__field-color {
   margin-bottom: 33px;
-  background-color: var(--second-color);
+
+  @media (--not-mobile) {
+    background-color: var(--second-color);
+    padding: 50px 0;
+  }
 }
 
 .form-order__field-user {
@@ -22,7 +39,10 @@
 
 .form-order__field-contacts {
   margin-bottom: 34.5px;
-  background-color: var(--second-color);
+
+  @media (--not-mobile) {
+    background-color: var(--second-color);
+  }
 }
 
 .form-order__field-info {
@@ -31,4 +51,7 @@
 
 .form-order__required-note {
   margin-bottom: 30px;
+  color: #444444;
+  font-size: 14px;
+  line-height: 1.14;
 }

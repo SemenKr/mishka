@@ -4,6 +4,15 @@
   display: flex;
   flex-direction: column;
 
+  @media (--mobile) {
+    margin-top: 120px;
+
+    &:hover {
+      margin-top: 115px;
+    }
+  }
+
+
   @media (--not-mobile) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,17 +37,63 @@
   width: auto;
   cursor: pointer;
 
+  @media (--not-mobile) {
+    margin-top: 372px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &:hover {
+      margin-top: 367px;
+    }
+  }
+
+  @media (--desktop) {
+    margin-top: 355px;
+
+    &:hover {
+      margin-top: 350px;
+    }
+  }
+
   &--icon_interior {
     background: var(--accent-color, #63d1bb);
     --icon: url("../../img/interior.svg");
-    padding: 30px 36px 27px 36px;
+    padding: 23px 36px 18px 30px;
+
+    &:hover {
+      padding-bottom: 23px;
+      background: #59d5bc;
+    }
+
+    &:active {
+      background: #59d5bc;
+    }
+
+
+    @media (--not-mobile) {
+      padding: 30px 36px 27px 36px;
+
+      &:hover {
+        padding-bottom: 32px;
+        background: #59d5bc;
+      }
+    }
+
+    @media (--desktop) {
+      padding: 31px 36px 27px 37px;
+
+      &:hover {
+        padding-bottom: 32px;
+        background: #59d5bc;
+      }
+    }
 
     &::after {
       content: "";
       display: block;
       width: 40px;
       height: 62px;
-      background: #149080;
+      background: rgba(20, 144, 128, 0.5);
       mask: var(--icon);
       box-sizing: border-box;
     }
@@ -47,14 +102,41 @@
   &--icon_toy {
     background: var(--accent-color-dark, #56c3b2);
     --icon: url("../../img/toy.svg");
-    padding: 32px 35px 27px 36px;
+    padding: 21px 27px 22px 30px;
+
+    &:hover {
+      padding-bottom: 27px;
+      background: #46c1ae;
+    }
+
+    &:active {
+      background: #46c1ae;
+    }
+
+    @media (--not-mobile) {
+      padding: 31px 33px 27px 36px;
+
+      &:hover {
+        padding-bottom: 32px;
+        background: #46c1ae;
+      }
+    }
+
+    @media (--desktop) {
+      padding: 31px 35px 27px 36px;
+
+      &:hover {
+        padding-bottom: 32px;
+        background: #46c1ae;
+      }
+    }
 
     &::after {
       content: "";
       display: block;
       width: 60px;
       height: 60px;
-      background: #149080;
+      background: rgba(20, 144, 128, 0.5);
       mask: var(--icon);
       box-sizing: border-box;
     }

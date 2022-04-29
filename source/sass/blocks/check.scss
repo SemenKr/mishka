@@ -1,0 +1,64 @@
+.check__label {
+  padding-left: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &--radio {
+    &::before {
+      content: "";
+      display: block;
+      margin-left: -60px;
+      background: url("../../img/check-radio.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 42px;
+      width: 42px;
+      height: 42px;
+      position: absolute;
+    }
+  }
+
+
+  &--checkbox {
+    &::before {
+      content: "";
+      display: block;
+      margin-left: -60px;
+      background: url("../../img/check-checkbox.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 38px;
+      width: 38px;
+      height: 38px;
+      position: absolute;
+    }
+  }
+}
+
+// Checked
+
+.check__input[type="radio"]:checked + .check__label::before {
+  content: "";
+  display: block;
+  margin-left: -60px;
+  background: url("../../img/check-radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 42px;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+}
+
+.check__input[type="checkbox"]:checked + .check__label::before {
+  content: "";
+  display: block;
+  margin-left: -60px;
+  background: url("../../img/check-checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 38px;
+  width: 38px;
+  height: 38px;
+}

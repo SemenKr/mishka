@@ -7,6 +7,10 @@
   @media (--mobile) {
     padding: 0;
   }
+
+  @media (--not-mobile) {
+    background-color: inherit;
+  }
 }
 
 .main-nav__list {

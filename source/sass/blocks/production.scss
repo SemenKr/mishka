@@ -1,3 +1,15 @@
 .production {
   background: var(--main-color);
+
+  @media (--mobile) {
+    padding-bottom: 58px;
+  }
+
+  @media (--not-mobile) {
+    padding-bottom: 64px;
+  }
+
+  @media (--desktop) {
+    padding-bottom: 105px;
+  }
 }

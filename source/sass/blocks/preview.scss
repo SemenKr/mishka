@@ -1,7 +1,16 @@
 .preview {
   display: flex;
+  position: relative;
 }
 
 .preview__image {
   width: 100%;
+  display: block;
+  position: relative;
+}
+
+.preview__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
