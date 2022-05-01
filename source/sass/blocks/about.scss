@@ -6,8 +6,13 @@
     margin-bottom: 28px;
   }
 
+  @media (--not-mobile) {
+    margin-bottom: 41.5px;
+  }
+
   @media (--desktop) {
     padding-left: 175px;
+    margin-bottom: 39px;
   }
 }
 

@@ -22,54 +22,134 @@
 .advantage__item {
   margin: 0;
   display: flex;
+  flex: auto;
+  flex-direction: column;
+  align-items: flex-start;
 
   @media (--mobile) {
-    flex-direction: column;
-    align-items: flex-start;
-
     &:nth-child(2n+2) {
       order: 1;
     }
   }
 
   @media (--not-mobile) {
-    min-width: 320px;
-    align-items: center;
+    &:nth-child(2n+1) {
+      padding-right: 90px;
+    }
   }
 
 
   &--icon_flower {
     --icon: url("../../img/flower.svg");
+    margin-bottom: 30px;
+
+    @media (--not-mobile) {
+      margin-bottom: 57px;
+    }
+
+    &::before {
+      width: 33px;
+      height: 38px;
+      margin-bottom: 16px;
+      transform: translateX(8px);
+
+      @media (--not-mobile) {
+        margin-bottom: 18px;
+      }
+    }
   }
 
   &--icon_clew {
     --icon: url("../../img/clew.svg");
+    margin-bottom: 33px;
+
+    @media (--not-mobile) {
+      margin-bottom: 59px;
+    }
+
+    &::before {
+      width: 35px;
+      height: 34px;
+      margin-bottom: 17px;
+      transform: translateX(3px);
+
+      @media (--not-mobile) {
+        margin-bottom: 19px;
+      }
+    }
   }
 
   &--icon_banknote {
     --icon: url("../../img/banknote.svg");
+    margin-bottom: 35px;
+
+    @media (--not-mobile) {
+      margin-bottom: 63px;
+    }
+
+    &::before {
+      width: 47px;
+      height: 27px;
+      margin-bottom: 26px;
+    }
   }
 
   &--icon_rocket {
-    --icon: url("../../img/rocke.svg");
+    --icon: url("../../img/rocket.svg");
+    margin-bottom: 32px;
+
+    @media (--not-mobile) {
+      margin-bottom: 58px;
+    }
+
+    &::before {
+      width: 55px;
+      height: 23px;
+      margin-bottom: 26px;
+      transform: translateX(-6px);
+
+      @media (--not-mobile) {
+        margin-bottom: 28px;
+      }
+    }
   }
 
   &--icon_heart {
     --icon: url("../../img/heart.svg");
+    margin-bottom: 32px;
+
+    @media (--not-mobile) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      width: 34px;
+      height: 27px;
+      margin-bottom: 21px;
+      transform: translateX(7px);
+    }
   }
 
   &--icon_gift-wrap {
     --icon: url("../../img/gift-wrap.svg");
+
+    &::before {
+      width: 33px;
+      height: 32px;
+      margin-bottom: 20px;
+      transform: translateX(3px);
+
+      @media (--not-mobile) {
+        margin-bottom: 21px;
+      }
+    }
   }
 
   &::before {
     content: "";
     display: block;
-    width: 55px;
-    height: 55px;
     background: #63d1bb;
     mask: var(--icon) no-repeat;
     box-sizing: border-box;
-    transform: translateX(-6px);
   }
 }
