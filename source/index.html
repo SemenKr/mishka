@@ -38,8 +38,12 @@
             <dd class="product-specification__specification">15 см</dd>
           </dl>
         </div>
-        <img class="product__image" src="img/basket-mobile.jpg" width="260" height="315"
-          alt="Набор из трёх вязанных корзинок.">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="./img/triple-set-desktop@1x.jpg 1x, ./img/triple-set-desktop@2x.jpg 2x">
+          <source media="(min-width:768px)" srcset="./img/triple-set-tablet@1x.jpg 1x, ./img/triple-set-tablet@2x.jpg 2x">
+          <img class="product__image" src="./img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg 2x"
+            width="260" height="315" alt="Набор из трёх вязанных корзинок.">
+        </picture>
         <div class="product__price-container">
           <dl class="product__price product-price">
             <dt class="product-price__description">Цена:</dt>
@@ -103,9 +107,11 @@
     <address class="contacts__address address contacts__container page__centerer">
       <dl class="address__list">
         <dt class="address__email">e-mail:</dt>
-        <dd class="address__content address__content--email"><a class="address__link link-address" href="info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
+        <dd class="address__content address__content--email"><a class="address__link link-address"
+            href="info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
         <dt class="address__title">адрес:</dt>
-        <dd class="address__content address__content--address">г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</dd>
+        <dd class="address__content address__content--address">г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101
+        </dd>
       </dl>
     </address>
     <div class="contacts__map">
