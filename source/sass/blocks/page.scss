@@ -15,17 +15,6 @@
   min-width: 260px;
   max-width: 1050px;
 
-  &--desktop_on {
-    @media (--mobile) {
-      display: contents;
-    }
-
-    &--desktop_off {
-      @media (--desktop) {
-        display: contents;
-      }
-    }
-  }
 
   @media (--not-mobile) {
     margin-inline: 50px;
@@ -33,5 +22,17 @@
 
   @media (--desktop) {
     margin-inline: auto;
+  }
+
+  &--mobile_off {
+    @media (--mobile) {
+      display: contents;
+    }
+  }
+
+  &--desktop_off {
+    @media (--desktop) {
+      display: contents;
+    }
   }
 }

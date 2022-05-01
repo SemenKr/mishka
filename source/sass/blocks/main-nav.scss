@@ -17,6 +17,22 @@
   @media (--mobile) {
     margin: 0;
   }
+
+  @media (--not-mobile) {
+    max-width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    background: transparent;
+  }
+
+  @media (--desktop) {
+    position: static;
+    flex-direction: row;
+    min-width: 450px;
+  }
 }
 
 .main-nav__sublist {

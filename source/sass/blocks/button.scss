@@ -8,12 +8,21 @@
   text-decoration: none;
   width: fit-content;
   background: var(--main-color);
-  padding: 16px 0;
+  padding: 16px 26px;
   color: #444444;
   border: 2px solid #444444;
   box-sizing: border-box;
   display: inline-block;
   cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
 
   &--size_wide {

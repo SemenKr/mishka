@@ -1,8 +1,8 @@
 .main-header {
   background: var(--main-color, #ffffff);
-  padding: 22px 31px;
+  padding-top: 22px;
+  padding-bottom: 22px;
   display: flex;
-  position: relative;
   justify-content: center;
   z-index: 2;
 
@@ -13,12 +13,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1050px;
+    position: relative;
+  }
+
+  @media (--desktop) {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
   }
 }
 
 .main-header__wrapper {
   position: relative;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .main-header__logo {
@@ -40,7 +46,7 @@
   width: 21px;
   height: 20px;
   z-index: 2;
-  right: 60px;
+  right: 30px;
   top: 40%;
   cursor: pointer;
 
@@ -58,7 +64,7 @@
   width: 20px;
   height: 14px;
   display: block;
-  justify-self: end;
+  justify-self: flex-end;
 
   @media (--not-mobile) {
     display: none;
@@ -79,7 +85,7 @@
   width: 21px;
   height: 20px;
   display: block;
-  justify-self: end;
+  justify-self: flex-end;
 
   @media (--not-mobile) {
     display: none;
@@ -90,11 +96,12 @@
   @media (--mobile) {
     position: absolute;
     bottom: -400%;
+    left: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
     background: var(--main-color);
-    min-width: 320px;
+    min-width: 260px;
   }
 
   @media (--not-mobile) {
@@ -107,6 +114,7 @@
   position: static;
   min-height: 0;
   bottom: -400%;
+  left: 0;
 }
 
 
@@ -117,24 +125,33 @@
 
   @media (--not-mobile) {
     order: 3;
-    position: absolute;
-    bottom: -200%;
-    left: 0;
-    background: transparent;
   }
 
   @media (--desktop) {
     order: 1;
+    justify-content: flex-start;
   }
 }
 
 .main-header__user {
-  @media (--not-mobile) {
+  margin: 0;
+
+  @media (--tablet) {
     order: 2;
+    margin-left: auto;
+  }
+
+  @media (--desktop) {
+    order: 3;
+    margin-left: auto;
   }
 }
 
 .main-header__description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+
   @media (--mobile) {
     display: none;
   }
@@ -142,8 +159,8 @@
   @media (--not-mobile) {
     order: 4;
     position: absolute;
-    bottom: -50%;
-    right: 30px;
+    bottom: -60%;
+    right: 0;
   }
 }
 
@@ -154,8 +171,8 @@
 
   @media (--desktop) {
     position: absolute;
-    bottom: -50%;
-    left: 30px;
+    bottom: -60%;
+    left: 0;
     background: transparent;
     display: block;
   }

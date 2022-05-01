@@ -1,6 +1,5 @@
 .featured {
   padding: 0;
-  position: relative;
 }
 
 .featured__container {
@@ -15,5 +14,6 @@
   @media (--desktop) {
     padding-top: 54px;
     padding-bottom: 73px;
+    position: relative;
   }
 }

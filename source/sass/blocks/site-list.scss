@@ -4,7 +4,20 @@
 
   @media (--not-mobile) {
     display: flex;
+    max-width: 60%;
+    flex-wrap: wrap;
     margin: 0;
+    z-index: 2;
+  }
+
+  @media (--desktop) {
+    margin-left: 0;
+  }
+}
+
+.site-list__item {
+  @media (--not-mobile) {
+    margin-right: 31px;
   }
 }
 
@@ -33,73 +46,20 @@
   align-items: center;
 
   @media (--not-mobile) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  @media (--not-mobile) {
     padding-top: 32.5px;
     padding-bottom: 31.5px;
-  }
-
-
-  &--icon_search {
-    --icon: url("../../img/search.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-
-    @media (--tablet) {
-      min-width: 82px;
-
-      span {
-        display: none;
-      }
-    }
-
-    &::before {
-      content: "";
-      display: block;
-      width: 18px;
-      height: 18px;
-      background: #000000;
-      mask: var(--icon);
-      box-sizing: border-box;
-    }
-
-    &:hover::before {
-
-      background: #63d1bb;
-    }
-
-    &:active::before {
-
-      background: rgba(99, 209, 187, 0.3);
-    }
-  }
-
-  &--icon_basket {
-    --icon: url("../../img/basket.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-
-    &::before {
-      content: "";
-      display: block;
-      width: 21px;
-      height: 18px;
-      background: #000000;
-      mask: var(--icon);
-      box-sizing: border-box;
-      position: absolute;
-      top: 32px;
-      left: 32px;
-    }
-
-    &:hover::before {
-
-      background: #63d1bb;
-    }
-
-    &:active::before {
-
-      background: rgba(99, 209, 187, 0.3);
-    }
   }
 }

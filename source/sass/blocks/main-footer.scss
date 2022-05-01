@@ -47,7 +47,7 @@
   @media (--not-mobile) {
     display: block;
     height: 34px;
-    justify-self: start;
+    justify-self: flex-start;
   }
 }
 
@@ -59,6 +59,6 @@
 
 .main-footer__copyright {
   @media (--not-mobile) {
-    justify-self: end;
+    justify-self: flex-end;
   }
 }

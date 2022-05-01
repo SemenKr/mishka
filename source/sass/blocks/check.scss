@@ -1,64 +1,220 @@
-.check__label {
-  padding-left: 60px;
-  position: relative;
+// .check__label {
+//   padding-left: 60px;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+
+//   &--radio {
+//     &::before {
+//       content: "";
+//       display: block;
+//       margin-left: -60px;
+//       background: url("../../img/check-radio.svg");
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: 42px;
+//       width: 42px;
+//       height: 42px;
+//       position: absolute;
+//     }
+//   }
+
+
+//   &--checkbox {
+//     &::before {
+//       content: "";
+//       display: block;
+//       margin-left: -60px;
+//       background: url("../../img/check-checkbox.svg");
+//       background-repeat: no-repeat;
+//       background-position: center;
+//       background-size: 38px;
+//       width: 38px;
+//       height: 38px;
+//       position: absolute;
+//     }
+//   }
+// }
+
+// // Checked
+
+// .check__input[type="radio"]:checked + .check__label::before {
+//   content: "";
+//   display: block;
+//   margin-left: -60px;
+//   background: url("../../img/check-radio-checked.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 42px;
+//   width: 42px;
+//   height: 42px;
+//   position: absolute;
+// }
+
+// .check__input[type="checkbox"]:checked + .check__label::before {
+//   content: "";
+//   display: block;
+//   margin-left: -60px;
+//   background: url("../../img/check-checkbox-checked.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 38px;
+//   width: 38px;
+//   height: 38px;
+// }
+:root {
+  --color-disabled: hsl(0deg 0% 70%);
+  --accent-color: #62d1ba;
+  accent-color: var(--accent-color);
+}
+
+.check {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   &--radio {
-    &::before {
-      content: "";
-      display: block;
-      margin-left: -60px;
-      background: url("../../img/check-radio.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 42px;
-      width: 42px;
-      height: 42px;
-      position: absolute;
-    }
+    gap: 19px;
   }
 
+  &--box {
+    gap: 23px;
+  }
+}
 
-  &--checkbox {
-    &::before {
-      content: "";
-      display: block;
-      margin-left: -60px;
-      background: url("../../img/check-checkbox.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 38px;
-      width: 38px;
-      height: 38px;
-      position: absolute;
+.check__control--kind_checkable {
+  font: inherit;
+  box-sizing: border-box;
+  border-radius: 50%;
+  appearance: none;
+  inline-size: 42px;
+  aspect-ratio: 1;
+  margin-block: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-30%);
+  position: relative;
+
+
+  @media (--not-mobile) {
+    inline-size: 52px;
+  }
+
+  &:hover {
+    --control-color: var(--accent-color);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+    --control-color: var(--accent-color);
+  }
+
+  &:checked {
+    --is-checked: 1;
+  }
+
+  &:disabled {
+    --control-color: var(--color-disabled);
+    cursor: not-allowed;
+  }
+
+  &::before {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: 120ms background ease-in-out;
+    mask: var(--control-border) no-repeat center/contain;
+    background: var(--control-color, currentcolor);
+  }
+
+  &::after {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    aspect-ratio: 1;
+    transform: scale(var(--is-checked, 0));
+    transition: 120ms transform ease-in-out;
+    mask: var(--control-tick) no-repeat center/contain;
+    background: var(--control-color, var(--accent-color));
+    inline-size: 18.3px;
+    position: absolute;
+
+    @media (--not-mobile) {
+      inline-size: 22.7px;
     }
   }
 }
 
-// Checked
+.check__control--box_checkable {
+  font: inherit;
+  box-sizing: border-box;
+  appearance: none;
+  inline-size: 38px;
+  aspect-ratio: 1;
+  margin-block: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-30%);
+  position: relative;
 
-.check__input[type="radio"]:checked + .check__label::before {
-  content: "";
-  display: block;
-  margin-left: -60px;
-  background: url("../../img/check-radio-checked.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 42px;
-  width: 42px;
-  height: 42px;
-  position: absolute;
+  @media (--not-mobile) {
+    inline-size: 52px;
+  }
+
+  &:hover {
+    --control-color: var(--accent-color);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+    --control-color: var(--accent-color);
+  }
+
+  &:checked {
+    --is-checked: 1;
+  }
+
+  &:disabled {
+    --control-color: var(--color-disabled);
+    cursor: not-allowed;
+  }
+
+  &::before {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    width: 100%;
+    aspect-ratio: 1;
+    transition: 120ms background ease-in-out;
+    mask: var(--control-border) no-repeat center/contain;
+    background: var(--control-color, currentcolor);
+  }
+
+  &::after {
+    content: "";
+    grid-area: 1 / 1 / 2 / 2;
+    aspect-ratio: 1;
+    transform: scale(var(--is-checked, 0));
+    transition: 120ms transform ease-in-out;
+    mask: var(--control-tick) no-repeat center;
+    background: var(--control-color, currentcolor);
+    inline-size: 23.2px;
+    position: absolute;
+
+    @media (--not-mobile) {
+      inline-size: 31.8px;
+    }
+  }
 }
 
-.check__input[type="checkbox"]:checked + .check__label::before {
-  content: "";
-  display: block;
-  margin-left: -60px;
-  background: url("../../img/check-checkbox-checked.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 38px;
-  width: 38px;
-  height: 38px;
+.check__control--type_checkbox {
+  --control-border: url("../../img/check-checkbox.svg");
+  --control-tick: url("../../img/check-boxtick.svg");
+}
+
+.check__control--type_radio {
+  --control-border: url("../../img/check-radio.svg");
+  --control-tick: url("../../img/check-radiotick.svg");
 }
