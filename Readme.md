@@ -4,7 +4,7 @@
 * Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
-<a  href="https://semenkr.github.io/mishka/" height="80"><img src="https://github.com/SemenKr/mishka/raw/master/source/img/logo.svg#desktop" width="200" height="80">Click Here</a>
+<a  href="https://semenkr.github.io/mishka/" style="display:block"><img src="https://github.com/SemenKr/mishka/raw/master/source/img/logo.svg#desktop" width="200" height="80" style="vertical-align:middle">Click Here</a>
 ---
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
