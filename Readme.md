@@ -4,8 +4,12 @@
 * Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
-<a  href="https://semenkr.github.io/mishka/" style="display:block"><img src="https://github.com/SemenKr/mishka/raw/master/source/img/logo.svg#desktop" width="200" height="80" style="vertical-align:middle"></a>
+<p dir="auto">
+<a  href="https://semenkr.github.io/mishka/" style="display:block"><img src="https://github.com/SemenKr/mishka/raw/master/source/img/logo.svg#desktop" width="200" height="80" align="center"></a>
 <a  href="https://semenkr.github.io/mishka/" style="padding:30px">Click Here</a>
+  </p>
+  
+  
 ---
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
